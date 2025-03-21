@@ -64,4 +64,70 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# zakat-fitrah-apps
+
+
+## Aplikasi Zakat Fitrah Sederhana
+
+  Aplikasi zakat yang dikembangkan menggunakan framework Laravel ini, bertujuan untuk mengelola data para muzakki yang menunaikan zakat, selain itu juga dapat menentukan jenis zakat yang dikeluarkan baik uang maupun beras. pada hasil akhir aplikasi akan ada laporan pentasarufan zakat dan total zakat yang didapatkan baik berupa uang maupun beras.
+
+## Requirements
+- [PHP >= 8.2](http://php.net/)
+- [Laravel Framework](https://github.com/laravel/framework)  
+
+## Fitur Aplikasi
+1. Mengelola data Muzakki (Orang yang berzakat)
+2. Mengelola data Mustahiq (Orang yang menerima zakat)
+3. Mengelola Jenis Zakat yang diserahkan ke panitia
+4. Laporan Muzakki
+5. Laporan Mustahiq
+6. Laporan Rincian Zakat
+
+<h2 id="download">💻 Install</h2>
+
+1. Clone repository
+
+```bash
+    git clone https://github.com/robiehakim88/zakat-fitrah-apps.git
+```
+
+```bash
+    cd zakat-fitrah-apps
+```
+
+```bash
+    composer update
+```
+
+```bash
+    cp .env.example .env
+```
+2. Konfigurasi database melalui `.env`
+
+```bash
+DB_PORT=3306
+DB_DATABASE=xxxx
+DB_USERNAME=root
+DB_PASSWORD=
+```
+3. Migrasi dan symlinks
+
+```bash
+php artisan key:generate
+```
+```bash
+php artisan migrate --seed
+```
+4. Jalankan website
+
+```bash
+php artisan serve
+```
+5. Tambahkan alamat email yang digunakan mendaftar pada file `.env`:
+```bash
+SYSTEM_ADMIN_EMAILS=admin@email.com;other_admin@email.com
+```
+6. Jika fitur upload foto tidak berjalan, hapus folder storage beserta semua isinya yang ada di dalam folder public, lalu gunakan perintah berikut
+```bash
+php artisan storage:link
+```
+
